@@ -36,3 +36,5 @@ Thumbs.db
 
 # Carpeta de uploads antigua
 backend/uploads/
+
+backend/certificados/
