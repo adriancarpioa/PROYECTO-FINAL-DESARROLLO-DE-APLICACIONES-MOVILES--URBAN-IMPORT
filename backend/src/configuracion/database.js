@@ -1,19 +1,33 @@
 const mysql = require('mysql2');
+const fs = require('fs');
+const path = require('path');
+
 require('dotenv').config();
 
-const conexion = mysql.createConnection({
+const configuracion = {
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
     port: process.env.DB_PORT
-});
+};
+
+// Si existe el certificado CA, usar SSL
+const rutaCertificado = path.join(__dirname, '../../certificados/ca.pem');
+
+if (fs.existsSync(rutaCertificado)) {
+    configuracion.ssl = {
+        ca: fs.readFileSync(rutaCertificado)
+    };
+}
+
+const conexion = mysql.createConnection(configuracion);
 
 conexion.connect((error) => {
     if (error) {
-        console.log('Error de conexión:', error);
+        console.error('Error de conexión:', error);
     } else {
-        console.log('MySQL conectado');
+        console.log('MySQL conectado correctamente');
     }
 });
 
