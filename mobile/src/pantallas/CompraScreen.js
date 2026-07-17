@@ -256,6 +256,7 @@ export default function CompraScreen({
             <TextInput
                 style={styles.input}
                 value={telefono}
+                placeholderTextColor="#888"
                 onChangeText={setTelefono}
                 placeholder="Teléfono"
             />
@@ -263,6 +264,7 @@ export default function CompraScreen({
             <TextInput
                 style={styles.input}
                 value={direccion}
+                placeholderTextColor="#888"
                 onChangeText={setDireccion}
                 placeholder="Dirección"
             />
@@ -270,6 +272,7 @@ export default function CompraScreen({
             <TextInput
                 style={styles.input}
                 value={referencia}
+                placeholderTextColor="#888"
                 onChangeText={setReferencia}
                 placeholder="Referencia"
             />
@@ -365,6 +368,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#ddd',
         borderRadius: 10,
+        color:'#000',
         padding: 15,
         marginBottom: 15
     },

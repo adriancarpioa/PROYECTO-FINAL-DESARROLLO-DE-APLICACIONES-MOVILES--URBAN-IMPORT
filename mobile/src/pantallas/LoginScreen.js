@@ -74,14 +74,16 @@ export default function LoginScreen({ navigation, route }) {
       <Text style={styles.subtitulo}>Iniciar sesión</Text>
 
       <TextInput
-        placeholder="Correo"
+        placeholder="Ingrese su correo"
+        placeholderTextColor="#808080"
         style={styles.input}
         value={correo}
         onChangeText={setCorreo}
       />
 
       <TextInput
-        placeholder="Contraseña"
+        placeholder="Ingrese su contraseña"
+        placeholderTextColor="#808080"
         secureTextEntry
         style={styles.input}
         value={contraseña}

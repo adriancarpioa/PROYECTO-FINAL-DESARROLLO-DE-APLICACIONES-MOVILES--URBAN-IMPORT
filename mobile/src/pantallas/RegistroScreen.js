@@ -59,21 +59,24 @@ export default function RegistroScreen({ navigation }) {
             </Text>
 
             <TextInput
-                placeholder="Nombre"
+                placeholder="Ingrese su nombre"
+                placeholderTextColor="#808080"
                 style={styles.input}
                 value={nombre}
                 onChangeText={setNombre}
             />
 
             <TextInput
-                placeholder="Correo"
+                placeholder="Ingrese su correo"
+                placeholderTextColor="#808080"
                 style={styles.input}
                 value={correo}
                 onChangeText={setCorreo}
             />
 
             <TextInput
-                placeholder="Contraseña"
+                placeholder="Ingrese su contraseña"
+                placeholderTextColor="#808080"
                 secureTextEntry
                 style={styles.input}
                 value={contraseña}
@@ -116,6 +119,7 @@ const styles = StyleSheet.create({
     input: {
         borderWidth: 1,
         borderColor: '#ddd',
+        color: '#000000',
         padding: 15,
         borderRadius: 10,
         marginBottom: 15

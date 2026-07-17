@@ -160,6 +160,7 @@ export default function CrearProductoScreen({ navigation }) {
 
             <TextInput
                 placeholder="Nombre"
+                placeholderTextColor="#888"
                 style={styles.input}
                 value={nombre}
                 onChangeText={setNombre}
@@ -167,6 +168,7 @@ export default function CrearProductoScreen({ navigation }) {
 
             <TextInput
                 placeholder="Descripción"
+                placeholderTextColor="#888"
                 style={styles.input}
                 value={descripcion}
                 onChangeText={setDescripcion}
@@ -174,6 +176,7 @@ export default function CrearProductoScreen({ navigation }) {
 
             <TextInput
                 placeholder="Precio"
+                placeholderTextColor="#888"
                 style={styles.input}
                 keyboardType="numeric"
                 value={precio}
@@ -288,6 +291,7 @@ const styles = StyleSheet.create({
 
     input: {
         backgroundColor: 'white',
+        color:'#000',
         padding: 15,
         borderRadius: 10,
         marginBottom: 15
